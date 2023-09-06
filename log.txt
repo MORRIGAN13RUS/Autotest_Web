@@ -1,0 +1,104 @@
+= 2023-09-06 04:10:44 INFO ====== WebDriver manager ======
+= 2023-09-06 04:10:46 INFO Get LATEST chromedriver version for google-chrome
+= 2023-09-06 04:10:46 INFO Get LATEST chromedriver version for google-chrome
+= 2023-09-06 04:10:46 INFO There is no [win64] chromedriver "116.0.5845.141" for browser google-chrome "116.0.5845.141" in cache
+= 2023-09-06 04:10:46 INFO Get LATEST chromedriver version for google-chrome
+= 2023-09-06 04:10:47 INFO WebDriver version 116.0.5845.96 selected
+= 2023-09-06 04:10:47 INFO Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
+= 2023-09-06 04:10:47 INFO About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
+= 2023-09-06 04:10:47 INFO Driver downloading response is 200
+= 2023-09-06 04:10:48 INFO Get LATEST chromedriver version for google-chrome
+= 2023-09-06 04:10:48 INFO Driver has been saved in cache [C:\Users\Goodwin\.wdm\drivers\chromedriver\win64\116.0.5845.141]
+= 2023-09-06 04:10:50 INFO Test1 Starting
+= 2023-09-06 04:10:52 INFO Test2 Starting
+= 2023-09-06 04:10:54 INFO Test3 Starting
+= 2023-09-06 04:11:01 INFO Test4 Starting
+= 2023-09-06 04:11:02 INFO Get alert text
+= 2023-09-06 04:11:02 INFO Got alert Form successfully submitted
+= 2023-09-06 04:11:02 INFO Test1 API starting
+= 2023-09-06 04:11:02 INFO Getting titles of my posts
+= 2023-09-06 04:11:02 ERROR Token for 552005 auth not get
+Traceback (most recent call last):
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 58, in get_token
+    token = self.login()
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 54, in login
+    return response.json()['token']
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+= 2023-09-06 04:11:02 ERROR Log In error
+Traceback (most recent call last):
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 68, in get_my_posts
+    data = self.session.get(url=address_posts, headers={'X-Auth-Token': token}).json()['data']
+KeyError: 'data'
+= 2023-09-06 04:11:03 INFO Test2 API starting
+= 2023-09-06 04:11:03 INFO Getting titles of not my posts
+= 2023-09-06 04:11:03 ERROR Token for 552005 auth not get
+Traceback (most recent call last):
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 58, in get_token
+    token = self.login()
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 54, in login
+    return response.json()['token']
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+= 2023-09-06 04:11:03 ERROR Auth error
+Traceback (most recent call last):
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 79, in get_other_posts
+    data = self.session.get(url=address_posts,
+KeyError: 'data'
+= 2023-09-06 04:11:03 INFO Test3 API starting
+= 2023-09-06 04:11:03 INFO Creating a new post
+= 2023-09-06 04:11:03 ERROR Token for 552005 auth not get
+Traceback (most recent call last):
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 58, in get_token
+    token = self.login()
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 54, in login
+    return response.json()['token']
+  File "C:\Users\Goodwin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+= 2023-09-06 04:11:04 ERROR Log In error
+Traceback (most recent call last):
+  File "D:\Обучение в GeekBraims\15. Автоматизация тестирования веб-приложений на Python\pythonProject3\BaseApp.py", line 95, in new_post
+    posts_info = self.session.get(url=address_posts,
+KeyError: 'data'

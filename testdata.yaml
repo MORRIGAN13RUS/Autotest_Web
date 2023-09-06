@@ -1,0 +1,15 @@
+address: https://test-stand.gb.ru/gateway
+address_posts: https://test-stand.gb.ru/api/posts
+sleep_time: 3
+implicitly_wait: 3
+username: 552005
+password: 25c7801de6
+test_title: Test post
+test_description: Test description...
+test_content: Test content...
+test_img: /test_img.jpg
+contact_name: Karina
+contact_email: karina@t.t
+contact_content: Test content...
+my_post_title: Test post
+not_my_post_title: Test post

@@ -1,0 +1,20 @@
+XPATH:
+  LOCATOR_LOGIN_FIELD : //*[@id="login"]/div[1]/label/input
+  LOCATOR_PASS_FIELD : //*[@id="login"]/div[2]/label/input
+  LOCATOR_ERROR_FIELD : //*[@id="app"]/main/div/div/div[2]/h2
+  LOCATOR_HELLO_LOGIN : //*[@id="app"]/main/nav/ul/li[3]/a
+  LOCATOR_POST_TITLE : //*[@id="create-item"]/div/div/div[1]/div/label/input
+  LOCATOR_POST_DESCRIPTION : //*[@id="create-item"]/div/div/div[2]/div/label/span/textarea
+  LOCATOR_POST_CONTENT : //*[@id="create-item"]/div/div/div[3]/div/label/span/textarea
+  LOCATOR_SAVE_BTN : //*[@id="create-item"]/div/div/div[7]/div/button
+  LOCATOR_POST_IMG : //*[@id="create-item"]/div/div/div[6]/div/div/label/input
+  LOCATOR_CONTACT_LINK : //*[@id="app"]/main/nav/ul/li[2]/a
+  LOCATOR_INPUT_YOUR_NAME : //*[@id="contact"]/div[1]/label/input
+  LOCATOR_INPUT_YOUR_EMAIL : //*[@id="contact"]/div[2]/label/input
+  LOCATOR_INPUT_CONTENT : //*[@id="contact"]/div[3]/label/span/textarea
+  LOCATOR_CONTACT_US_BTN : //*[@id="contact"]/div[4]/button/span
+CSS_SELECTOR :
+  LOCATOR_LOGIN_BTN : 'button'
+  LOCATOR_POST_ADDED : 'h1'
+ID:
+  LOCATOR_CREATE_POST_BTN : 'create-btn'
